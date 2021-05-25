@@ -16,16 +16,15 @@ a, a:link{
     --minorColorDeep: #065260;
     --thirdColor: #FFF001;
 }
-/* ------------------------------------------------------ */
 body {
     background: url(../img/bg.jpg);
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 500;
 }
-
 .header {
-    height: 150px;
+    height: auto;
     width: 100%;
+    padding-bottom: 10px;
     background-color: var(--mejorColor);
     position: relative;
 }
@@ -36,15 +35,18 @@ body {
     left: 0;
 }
 .title {
-    position: absolute;
+    max-width: 100%;
+    position: relative;
+    margin-top: 60px;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    height: 90px;
 }
-.header div {
+.ic {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 35%;
+    right: 10px;
 }
 .header figure {
     width: 35px;
@@ -55,32 +57,41 @@ body {
     position: relative;
 }
 .header figure div {
+    width: 36px;
+    height: 36px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.facebook div {
-    width: 36px;
-    height: 36px;
+.burger {
+    display: none;
+}
+.burger div {
+    background: url(../img/m_menu.png);
+    background-position: left 396px;
+}
+.burger div:active {
+    background: url(../img/m_menu.png);
+    background-position: left 360px;
+}
+.home div {
     background: url(../img/m_menu.png);
     background-position: left 72px;
 }
-.facebook div:hover{
+.home div:hover{
     background-position: left 36px;
 }
 
-.home div {
-    width: 36px;
-    height: 36px;
+.facebook div {
     background: url(../img/m_menu.png);
     background-position: left 144px;
 }
-.home div:hover {
+.facebook div:hover {
     background-position: left 108px;
 }
 .nav {
-    height: 75px;
+    height: 60px;
     background-color: var(--mejorColor);
     position: relative;
 }
@@ -109,24 +120,64 @@ body {
 .nav li:hover, .nav li.active {
     background-color: var(--thirdColor);
 }
-.nav div {
+.header .border {
     height: 9px;
     width: 100%;
     background: url(../img/header_l.jpg) ;
     position: absolute;
     bottom: 0;
 }
-
+@media screen and (max-width: 768px){
+    .header {
+        height: 225px;
+    }
+    .title {
+        margin-top: 90px;
+    }
+    .ic {
+        position: absolute;
+        bottom: unset;
+        top: 10px;
+        right: 10px;
+    }
+    .header figure div {
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .burger {
+        display: block;
+    }
+    .burger div {
+        background: url(../img/m_menu.png);
+        background-position: left 396px;
+    }
+    .burger div:active {
+        background: url(../img/m_menu.png);
+        background-position: left 360px;
+    }
+    .home, .facebook {
+        display: none;
+    }
+    .nav {
+        display: none;
+    }   
+}
 .main {
-    /* background-color: rgba(64, 224, 208, 0.487); */
     max-width: 960px;
     margin: 0 auto;
     padding-top: 50px;
 }
 .main p {
-    line-height: 1.8rem;
-    margin: 10px 0;
+    line-height: 1.5rem;
+    margin: 15px 0;
     color: #5F5F5F;
+}
+.rwd {
+    display: none;
 }
 .main span {
     color: var(--minorColorDeep);
@@ -156,11 +207,12 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .introduction {
-    /* background-color: white; */
-    /* border: 1px solid var(--minorColor); */
     margin: 0px 25px;
     text-align: center;
     position: relative;
+}
+.introTitle {
+    max-width: 100%;
 }
 .introduction .hat {
     position: absolute;
@@ -183,15 +235,63 @@ body {
     text-decoration: underline;
 }
 .description .student {
-    position: absolute;
-    left: -30px;
-    bottom: 10px;
+    position: relative;
+    left: -65px;
+    bottom: -20px;
 }
 .description .eventProcess {
-    transform: translateX(70px);
+    position: absolute;
+    right: 20px;
+}
+.description .eventProcess img {
+    max-width: 100%;
 }
 .notice .alert {
     color: var(--minorColor);
+}
+
+@media screen and (max-width: 768px){
+    .rwd {
+        display: inline;
+    }
+    .main h1 {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .box {
+        background-color: white;
+        border: 2px solid var(--mejorColor);
+        border-radius: 25px;
+        margin: 70px 20px;
+        padding: 35px 20px 10px;
+        position: relative;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .introTitle {
+        max-width: 100%;
+    }
+    .introduction .hat {
+        display: none;
+    }
+    .eventTime img {
+        display: none;
+    }
+    .description {
+        position: relative;
+    }
+    .description .student {
+        display: none;
+    }
+    .description .eventProcess {
+        position: static;
+        right: unset;
+    }
+    .eventProcess img{
+        display: block;
+        margin: auto;
+    }
 }
 .footer {
     background-color: black;
@@ -229,4 +329,64 @@ hr {
     font-size: 5px;
     color: #5F5F5F;
     font-weight: 200;
+}
+@media screen and (max-width: 768px){
+    .footer {
+        padding-top: 0;
+    }
+    .footer h1 {
+        width: 100%;
+        height: auto;
+        border-radius: unset;
+        font-size: 15px;
+        padding: 8px;
+        font-weight: 200;
+        background-color: #5F5F5F;
+        color: #C3C3C3;
+        position: static;
+        transform: none;
+    }
+    .footer>div{
+        margin-bottom: 0;
+    }
+    .flex {
+        display: block;
+    }
+    .grid {
+        display: grid;
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "fooTitle fooTitle"
+            "fooimg1 fooimg2"
+            "fooimg3 none";
+    }
+    .fooTitle {
+        grid-area: fooTitle;
+    }
+    .fooimg1 {
+        grid-area: fooimg1;
+        border-bottom: 1px solid #5F5F5F;
+        border-right: 1px solid #5F5F5F;
+    }
+    .fooimg2 {
+        grid-area: fooimg2;
+        border-bottom: 1px solid #5F5F5F;
+    }
+    .fooimg3 {
+        grid-area: fooimg3;
+        border-right: 1px solid #5F5F5F;
+    }
+    .footer img {
+        position: absolute;
+        margin: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .footer figure {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
 }

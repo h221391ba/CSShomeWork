@@ -14,27 +14,33 @@
     <header class="header">
         <img class="logo" src="./img/logo_top.png" alt="logo" height="40">
         <img class="title" src="./img/title.png" alt="title">
-        <div>
-            <figure class="facebook">
+        <div class="ic">
+            <figure class="burger">
                 <div></div>
             </figure>
             <figure class="home">
                 <div></div>
             </figure>
+            <figure class="facebook">
+                <div></div>
+            </figure>
         </div>
+        <nav class="nav">
+            <ul class="listUnstyle">
+                <li class="active"><a href="#">活動辦法</a></li>
+                <li><a href="#">全台海選</a></li>
+                <li><a href="#">YOP12決賽</a></li>
+                <li><a href="#">制服辣秘辛</a></li>
+            </ul>
+        </nav>
+        <div class="border"></div>
     </header>
-    <nav class="nav">
-        <ul class="listUnstyle">
-            <li class="active"><a href="#">活動辦法</a></li>
-            <li><a href="#">全台海選</a></li>
-            <li><a href="#">YOP12決賽</a></li>
-            <li><a href="#">制服辣秘辛</a></li>
-        </ul>
-        <div></div>
-    </nav>
     <main class="main">
         <section class="introduction">
-            <img src="./img/p_title.png" alt="title">
+            <picture>
+                <source srcset="./img/p_title_m.png" media="(max-width: 768px)">
+                <img class="introTitle" src="./img/p_title.png" alt="title">
+            </picture>
             <img class="hat" src="./img/hat.png" alt="BachelorCap">
             <p>專屬高校生的青春印記<br>
                 第三屆畢業季高校制服大賞熱血開跑！<br>
@@ -47,30 +53,27 @@
         </section>
         <section class="eventTime box">
             <h1 class="circle">活動時間</h1>
-            <p>
-                <span>第一階段－全台海選：</span>2016/04/11－04/29，23:59止<br>
-                <span>第二階段－TOP12決賽 (最佳人氣/最萌女校服/最鮮男校服)：</span>2016/05/09－05/27，23:59止<br>
-                <span>得獎公佈：</span>2016/06/08 公布於同網頁，敬請密切注意！
-            </p>
+            <p><span>第一階段－全台海選：</span><br class="rwd">2016/04/11－04/29，23:59止</p>
+            <P><span>第二階段－TOP12決賽 <br class="rwd">(最佳人氣/最萌女校服/最鮮男校服)：</span><br class="rwd">2016/05/09－05/27，23:59止</P>
+            <P><span>得獎公佈：</span><br class="rwd">2016/06/08 公布於同網頁，敬請密切注意！</P>
             <img src="./img/girl1.png" alt="student">
         </section>
         <section class="description box">
             <h1 class="circle">賽程說明</h1>
-            <p>
-                <a href="#">第一階段－全台海選：</a> 請進入制服地圖活動頁面，登入FB帳號即可投票，每日每帳號可投20票，同項目不可重複投票。<br>
-                <a href="#">第二階段－TOP12決賽(最佳人氣/最萌女校服/最鮮男校服)：</a>請進入 SETN.com 三立新聞網活動頁面，登入FB帳號即可投票。三個比賽項目每小時可各投六票，共18票。同項目不可重複投票。
-            </p>
-            <img class="eventProcess" src="./img/way_p.jpg" alt="eventProcess">
+            <p><a href="#">第一階段－全台海選：</a><br class="rwd">請進入制服地圖活動頁面，登入FB帳號即可投票，每日每帳號可投20票，同項目不可重複投票。<br></p>
+            <P><a href="#">第二階段－TOP12決賽<br class="rwd">(最佳人氣/最萌女校服/最鮮男校服)：</a><br class="rwd">請進入 SETN.com 三立新聞網活動頁面，登入FB帳號即可投票。三個比賽項目每小時可各投六票，共18票。同項目不可重複投票。</P> 
+            <picture class="eventProcess">
+                <source srcset="./img/way_mobile.jpg" media="(max-width: 768px)">
+                <img  src="./img/way_p.jpg" alt="eventProcess">
+            </picture>
             <img class="student" src="./img/girl2.png" alt="student">
         </section>
         <section class="awards box">
             <h1 class="circle">活動獎項</h1>
-            <p>
-                <span>參加獎：</span>凡參加投票者皆具備抽獎資格，共11名。<br>
-                <span>神準獎：</span>精準預測前12強之投票者，即有機會獲得OOOOO，共XX名。<br>
-                <span>應援獎：</span>應援冠軍隊伍之投票者，即有機會獲得OOOOO，共XX名。<br>
-                <span>讚聲獎：</span>活動期間，分享活動訊息至FB皆具備抽獎資格，共XX名。<br>
-            </p>
+            <p><span>參加獎：</span><br class="rwd">凡參加投票者皆具備抽獎資格，共11名。</p>
+            <p><span>神準獎：</span><br class="rwd">精準預測前12強之投票者，即有機會獲得OOOOO，共XX名。</p>
+            <p><span>應援獎：</span><br class="rwd">應援冠軍隊伍之投票者，即有機會獲得OOOOO，共XX名。</p>
+            <p><span>讚聲獎：</span><br class="rwd">活動期間，分享活動訊息至FB皆具備抽獎資格，共XX名。</p>
         </section>
         <section class="notice box">
             <h1 class="circle">注意事項</h1>
@@ -108,17 +111,29 @@
     </main>
     <footer class="footer">
         <div class="flex">
-            <div class="flex">
-                <h1 class="circle">執行單位</h1>
-                <img src="./img/f_um.png" alt="">
-                <img src="./img/f_setn.png" alt="">
-                <img src="./img/f_st.png" alt="">
+            <div class="flex grid">
+                <h1 class="circle fooTitle">執行單位</h1>
+                <figure class="fooimg1">
+                    <img src="./img/f_um.png" alt="">
+                </figure>
+                <figure class="fooimg2">
+                    <img src="./img/f_setn.png" alt="">
+                </figure>
+                <figure class="fooimg3">
+                    <img src="./img/f_st.png" alt="">
+                </figure>
             </div>
-            <div class="flex">
-                <h1 class="circle">特別感謝</h1>
-                <img src="./img/f_ga.png" alt="">
-                <img src="./img/f_swanky.png" alt="">
-                <img src="./img/f_aken.png" alt="">
+            <div class="flex grid">
+                <h1 class="circle fooTitle">特別感謝</h1>
+                <figure class="fooimg1">
+                    <img src="./img/f_ga.png" alt="">
+                </figure>
+                <figure class="fooimg2">
+                    <img src="./img/f_swanky.png" alt="">
+                </figure>
+                <figure class="fooimg3">
+                    <img src="./img/f_aken.png" alt="">
+                </figure>
             </div>
         </div>
         <hr>
