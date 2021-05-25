@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+.listUnstyle {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a, a:link{
+    text-decoration: none;
+    color: var(--minorColorDeep);
+}
+:root {
+    --mejorColor: #18B8C8;
+    --minorColor: #208597;
+    --minorColorDeep: #065260;
+    --thirdColor: #FFF001;
+}
+/* ------------------------------------------------------ */
+body {
+    background: url(../img/bg.jpg);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+}
+
+.header {
+    height: 150px;
+    width: 100%;
+    background-color: var(--mejorColor);
+    position: relative;
+}
+.logo {
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.title {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.header figure {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    background-color: var(--minorColorDeep);
+    border-radius: 50%;
+    position: relative;
+}
+.header figure div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.facebook div {
+    width: 36px;
+    height: 36px;
+    background: url(../img/m_menu.png);
+    background-position: left 72px;
+}
+.facebook div:hover{
+    background-position: left 36px;
+}
+
+.home div {
+    width: 36px;
+    height: 36px;
+    background: url(../img/m_menu.png);
+    background-position: left 144px;
+}
+.home div:hover {
+    background-position: left 108px;
+}
+.nav {
+    height: 75px;
+    background-color: var(--mejorColor);
+    position: relative;
+}
+.nav ul {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav li {
+    padding: 5px 15px;
+    /* width: 100px; */
+    height: 35px;
+    background-color: transparent;
+    border-radius: 20px;
+    text-align: center;
+}
+.nav li a{
+    font-weight: 700;
+}
+.nav li:hover, .nav li.active {
+    background-color: var(--thirdColor);
+}
+.nav div {
+    height: 9px;
+    width: 100%;
+    background: url(../img/header_l.jpg) ;
+    position: absolute;
+    bottom: 0;
+}
+
+.main {
+    /* background-color: rgba(64, 224, 208, 0.487); */
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.main p {
+    line-height: 1.8rem;
+    margin: 10px 0;
+    color: #5F5F5F;
+}
+.main span {
+    color: var(--minorColorDeep);
+}
+.main h1, .footer h1 {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: var(--minorColor);
+    font-size: 21px;
+    font-weight: 500;
+    padding: 23px;
+    line-height: 1em;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-30%, -50%);
+}
+.box {
+    background-color: white;
+    border: 2px solid var(--mejorColor);
+    border-radius: 25px;
+    margin: 80px 40px;
+    padding: 35px;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.introduction {
+    /* background-color: white; */
+    /* border: 1px solid var(--minorColor); */
+    margin: 0px 25px;
+    text-align: center;
+    position: relative;
+}
+.introduction .hat {
+    position: absolute;
+    left: 90px;
+    bottom: 90px;
+}
+.eventTime {
+    margin-top: 60px;
+    position: relative;
+}
+.eventTime img {
+    position: absolute;
+    right: 20px;
+    bottom: -5px;
+}
+.description {
+    position: relative;
+}
+.description a:hover {
+    text-decoration: underline;
+}
+.description .student {
+    position: absolute;
+    left: -30px;
+    bottom: 10px;
+}
+.description .eventProcess {
+    transform: translateX(70px);
+}
+.notice .alert {
+    color: var(--minorColor);
+}
+.footer {
+    background-color: black;
+    padding-top: 20px;
+    text-align: center;
+}
+.footer h1 {
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+    padding: 8px;
+    font-weight: 200;
+    background-color: #5F5F5F;
+    color: #C3C3C3;
+    position: static;
+    transform: none;
+}
+.footer>div{
+    margin-bottom: 20px;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer img{
+    margin: 0 20px;
+    height: 50px;
+}
+hr {
+    border-color: #5F5F5F;
+}
+.footer h3{
+    padding: 5px 0;
+    font-size: 5px;
+    color: #5F5F5F;
+    font-weight: 200;
+}
